@@ -1,0 +1,10 @@
+<!-- http://api.alquran.cloud/v1/surah surahs data -->
+http://api.alquran.cloud/v1/surah/114/editions/quran-uthmani,en.asad,en.pickthall /////////
+<!-- "http://api.alquran.cloud/v1/edition/format/audio" audio surah editions -->
+"http://api.alquran.cloud/v1/edition?&&type=translation" translation editions
+`http://api.alquran.cloud/v1/surah/1?offset=1&limit=3` audio data 
+`http://api.alquran.cloud/v1/quran/${item}` translation surah data
+`http://api.alquran.cloud/v1/juz/${juzNumber}/${quranReader}` audio juz data
+`http://api.alquran.cloud/v1/juz/${juzNumber}/${item}` juz translation data
+`http://api.alquran.cloud/v1/edition/type/tafsir` tafsir edition
+`http://api.alquran.cloud/v1/quran/${selectedTafsir}` tafsir data
