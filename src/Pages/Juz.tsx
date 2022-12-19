@@ -1,7 +1,7 @@
 import { Box, CircularProgress } from "@mui/material"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import Navbar from "../Components/NavBar"
+import Navbar from "../Components/quran_page_nav"
 import { useQuery, useQueryClient } from "react-query"
 import { getAllJuzData, getLimitedJuzData, getTranslatedJuzAyahs, getTranslateIdentifiers } from "../Api/Api"
 import Ayah from "../Components/Ayah"

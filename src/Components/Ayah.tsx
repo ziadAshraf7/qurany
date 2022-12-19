@@ -45,7 +45,8 @@ import {handleScrollTo } from "../utils/utils";
                 transform : targetAyah ? "translateZ(200px)" : "translateZ(-200px)"
                 }}>
 
-                   {!targetAyah && <Box sx={{direction : "rtl"}}>
+                   {!targetAyah && 
+                   <Box sx={{direction : "rtl"}}>
                     <Stack direction={"row"} justifyContent = {"space-between"}>
                       <Box sx = {{ position : "relative" , width : ["30px","35px"] , height : "35px" }}>
                          <img style = {{ position : "absolute" ,width : "100%" , height : "100%" , objectFit : "cover"}}  src = {require("../imgs/PngItem_5034905.png")} />
@@ -58,16 +59,16 @@ import {handleScrollTo } from "../utils/utils";
                      {targetAyah && <div style={{height : "100%"}}>
                         
                         
-                    <Stack mb = {5} spacing={1} direction = {"row"} justifyContent = {"flex-end"}>
-                        
+                    <Stack mb = {5} spacing={1} direction = {"row"} justifyContent = {"flex-end"}> 
                         <Typography sx = {{
                             fontSize : [16,25] , 
+                            width : "100%" ,
                             direction : "rtl"}} 
                              >{ayahText}</Typography>
                             
                              <Box sx = {{ position : "relative" , width : ["30px","35px"] , height : "35px" }}>
                                <img 
-                               style = {{ position : "absolute" ,width : "100%" , height : "100%" , objectFit : "cover"}}
+                               style = {{width : "100%" , height : "100%" , objectFit : "cover"}}
                                src = {require("../imgs/PngItem_5034905.png")} />
                                  <Typography sx = {{fontSize : [12 , 14] , position : "absolute" , top : "50%" , transform : "translate(0,-50%)" , width : "100%" , textAlign : "center"}}>{ayahNumberinSurah}</Typography>
                              </Box>
@@ -101,7 +102,7 @@ import {handleScrollTo } from "../utils/utils";
                             {translatedAyah.length > 0 && translatedAyah.map((ayah : any , index : number) =>{
                                 return (
                                     <Stack mb = {2} key = {index} direction = {"row"}>
-                                        <Paper >{langs[index]}</Paper>
+                                        <Paper sx = {{height : "fit-content"}} >{langs[index]}</Paper>
                                         <Typography sx = {{fontSize : [7 , 15]}}>{ayah?.text}</Typography>
                                     </Stack>
                                 )

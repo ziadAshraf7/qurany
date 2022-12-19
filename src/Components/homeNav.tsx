@@ -51,8 +51,8 @@ function HomeNav(){
           </Typography>
         
             <Stack width={"100px"} direction="row" justifyContent={"space-between"}>
-                <Link smooth to = {"surahs"}><Typography onClick = {() => setActiveNav("surah")} borderBottom={activeNav == "surah" ?"1px solid #00e5ff" : ""} p = {1} sx = {{cursor : "pointer"}}>surah</Typography></Link>
-                <Link smooth to ={"juzs"}><Typography  onClick = {() => setActiveNav("juz")} borderBottom={activeNav == "juz" ?"1px solid #00e5ff" : ""} p = {1} sx = {{cursor : "pointer"}}>juz</Typography></Link>
+                <Link smooth to = {"surahs"}><Typography fontSize={[18]} onClick = {() => setActiveNav("surah")} borderBottom={activeNav == "surah" ?"1px solid #00e5ff" : ""} p = {1} sx = {{cursor : "pointer"}}>surah</Typography></Link>
+                <Link smooth to ={"juzs"}><Typography fontSize={[18]}  onClick = {() => setActiveNav("juz")} borderBottom={activeNav == "juz" ?"1px solid #00e5ff" : ""} p = {1} sx = {{cursor : "pointer"}}>juz</Typography></Link>
             </Stack>
      
 

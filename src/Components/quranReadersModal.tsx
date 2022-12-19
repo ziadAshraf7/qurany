@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Modal, Typography } from "@mui/material"
+import { Box, Grid, Modal, Typography } from "@mui/material"
 import { useState } from "react";
 import { useTheme } from '@mui/material/styles';
 import Tabs from '@mui/material/Tabs';
@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import { useStyles } from "./styles/quranReaderModalStyles";
 import { a11yProps, fabStyle, TabPanel } from "./modalAssets";
 import { quranReaderModalProps } from "../Types/types";
-import ModalHeader from "rsuite/esm/Modal/ModalHeader";
 
 
 
