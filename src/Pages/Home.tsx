@@ -42,6 +42,8 @@ const Home  = () =>{
 
         <HomeNav />
 
+
+
         <div style = {{backgroundColor :"RGBA(255, 255, 255, 0.24)"}}>
 
              <Stack mb = {20} sx = {{width : "100%"}} justifyContent={"center"} alignItems = {"center"} direction={{xs : "column" , md : "row"}}>
@@ -75,7 +77,7 @@ const Home  = () =>{
          <Grid spacing={5} container >
             {Array.from(new Array(114) , (_ , i) =>{
                 return (
-                    <Grid key = {i} item xs = {4} sm = {3} md = {2}>
+                    <Grid key = {i} item xs = {12} md = {6} lg = {4}>
                     <Skeleton sx = {{width : "100%" , padding : "10px"}} animation="wave" />
                    </Grid>
                 )
@@ -134,7 +136,7 @@ const Home  = () =>{
          <Grid spacing={5} container >
             {Array.from(new Array(30) , (_ , i) =>{
                 return (
-                    <Grid key = {i} item xs = {4} sm = {3} md = {2}>
+                    <Grid key = {i} item xs = {12} md = {6} lg = {4}>
                     <Skeleton sx = {{width : "100%" , padding : "10px"}} animation="wave" />
                    </Grid>
                 )
