@@ -159,7 +159,7 @@ function NavBar({
             return translationSelectionItems(header , translationIdentifiersArray)
           })}
         </Select>
-        <FormHelperText sx = {{color : "#b3b3b3" , margin : 0 , fontSize : "10px"}}>you have maximum 5 translation type to add</FormHelperText>
+        <FormHelperText sx = {{color : "#b3b3b3" , margin : 0 , fontSize : ["4px" , "10px"] , whiteSpace : "no-wrap"}}>you have maximum 5 translation type to add</FormHelperText>
       </FormControl>
           <Box></Box>
          <Box sx = {{position : "absolute" , bottom : 0 , height : "2px" , left: 0 , width : scrollWidth + "%" , backgroundColor : "#00e5ff"}}></Box>
