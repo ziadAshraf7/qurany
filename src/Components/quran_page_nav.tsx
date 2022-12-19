@@ -141,9 +141,10 @@ function NavBar({
         </FormControl > 
       
 
-        <FormControl sx = {{padding : 0 , width : [80 , 250], height : [20,30] , backgroundColor : "white"}} >
+        <FormControl sx = {{width : [80 , 250], height : [20,30] , backgroundColor : "white"}} >
           <InputLabel sx = {{position : "absolute" , top : -12 , fontSize : [10,14]}}>translation</InputLabel>
-        <Select        
+        <Select   
+        sx = {{padding : 0}}     
          renderValue={(selected) =>{
              return selected.join(", ")
              }}            

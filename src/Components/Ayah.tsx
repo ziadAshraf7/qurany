@@ -94,7 +94,7 @@ import {handleScrollTo } from "../utils/utils";
                             >
                             <source src={audio} type="audio/ogg"/>
                             </audio>
-                            {audioLoadError && <Typography sx = {{fontSize : [12,16]}}>Failed to Load ,pleaze refresh the page</Typography>}
+                            {audioLoadError && <Typography sx = {{fontSize : [12,16]}}>Failed to Load ,refresh the page</Typography>}
                         </div>
 
                         <Box mt = {3} mb = {3} >
