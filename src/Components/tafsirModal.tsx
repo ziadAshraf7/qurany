@@ -1,10 +1,9 @@
-import { Box, CircularProgress, FormControl, InputLabel, MenuItem, Modal, Select, SelectChangeEvent, Typography } from "@mui/material"
+import { Box, CircularProgress, Container, FormControl, InputLabel, MenuItem, Modal, Select, SelectChangeEvent, Typography } from "@mui/material"
 import {  useState } from "react";
 import Backdrop from '@mui/material/Backdrop';
 import Fade from '@mui/material/Fade';
 import { useQuery } from "react-query";
 import { getTafsirData, getTafsirEditions } from "../Api/Api";
-import { Container } from "rsuite";
 import { style } from "./styles/tafsirModalStyles";
 import { tafsirModalProps } from "../Types/types";
 
