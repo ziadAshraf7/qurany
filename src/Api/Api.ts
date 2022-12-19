@@ -3,12 +3,12 @@ import { edition } from "../Types/types";
 
 
 export async function getSurahsData(){
- return  await axios.get("http://api.alquran.cloud/v1/surah").then(res => res.data.data )
+ return  await axios.get("https://api.alquran.cloud/v1/surah").then(res => res.data.data )
 }
 
 
 export async function getQuranReaders(){
-    return await axios.get("http://api.alquran.cloud/v1/edition/format/audio" , {
+    return await axios.get("https://api.alquran.cloud/v1/edition/format/audio" , {
         transformResponse : (data) =>{
             let Data = JSON.parse(data)
             let dataObject = Data.data.reduce((acc : any , item : edition) =>{
@@ -29,17 +29,17 @@ export async function getQuranReaders(){
 
 
 export async function getLimitedAyahs(surahNumber: string | undefined , quranIdentifier: string | undefined , limit: number){
-    return await axios.get(`http://api.alquran.cloud/v1/surah/${surahNumber}/${quranIdentifier}?offset=0&limit=${limit}`).then(res => res.data.data)
+    return await axios.get(`https://api.alquran.cloud/v1/surah/${surahNumber}/${quranIdentifier}?offset=0&limit=${limit}`).then(res => res.data.data)
 }
 
 
 export async function getTotalAyahsData(surahNumber: string | undefined , quranIdentifier: string | undefined ){
-    return await axios.get(`http://api.alquran.cloud/v1/surah/${surahNumber}/${quranIdentifier}`).then(res => res.data.data)
+    return await axios.get(`https://api.alquran.cloud/v1/surah/${surahNumber}/${quranIdentifier}`).then(res => res.data.data)
 }
 
 
 export async function getTranslateIdentifiers(){
-    return await axios.get(`http://api.alquran.cloud/v1/edition?&&type=translation` , {
+    return await axios.get(`https://api.alquran.cloud/v1/edition?&&type=translation` , {
         transformResponse : (data) =>{
             let Data = JSON.parse(data)
             let dataObject = Data.data.reduce((acc : any , item : edition) =>{
@@ -61,19 +61,19 @@ export async function getTranslateIdentifiers(){
 
 
 export async function getTranslatedAyahs(surahNumber: string | undefined , translateIdentifiers: string[] , limit: number){
-    return translateIdentifiers.length > 0 ? await axios.get(`http://api.alquran.cloud/v1/surah/${surahNumber}/editions/${translateIdentifiers.join(",")}?offset=0&limit=${limit}`).then(res => res.data.data) :
+    return translateIdentifiers.length > 0 ? await axios.get(`https://api.alquran.cloud/v1/surah/${surahNumber}/editions/${translateIdentifiers.join(",")}?offset=0&limit=${limit}`).then(res => res.data.data) :
     false
 }
 
 
 export async function getTafsirEditions(){
-    return await axios.get("http://api.alquran.cloud/v1/edition/type/tafsir").then(res => res.data.data)
+    return await axios.get("https://api.alquran.cloud/v1/edition/type/tafsir").then(res => res.data.data)
 }
 
 
 
 export async function getTafsirData(tafsirIdentifier : string , ayahNumber : number | undefined){
-    return tafsirIdentifier !== "" && ayahNumber ?  await axios.get(`http://api.alquran.cloud/v1/ayah/${ayahNumber}/${tafsirIdentifier}`).then(res => res.data.data.text) :
+    return tafsirIdentifier !== "" && ayahNumber ?  await axios.get(`https://api.alquran.cloud/v1/ayah/${ayahNumber}/${tafsirIdentifier}`).then(res => res.data.data.text) :
     false
 }
 
@@ -81,14 +81,14 @@ export async function getTafsirData(tafsirIdentifier : string , ayahNumber : num
 
 
 export async function getLimitedJuzData(juzNumber: string | undefined , quranIdentifier: string | undefined , limit : number){
-    return await axios.get(`http://api.alquran.cloud/v1/juz/${juzNumber}/${quranIdentifier}?offset=0&limit=${limit}`).then(res => res.data.data)
+    return await axios.get(`https://api.alquran.cloud/v1/juz/${juzNumber}/${quranIdentifier}?offset=0&limit=${limit}`).then(res => res.data.data)
 }
 
 
 
 
 export async function getAllJuzData(juzNumber: string | undefined  , quranIdentifier: string | undefined ){
-    return await axios.get(`http://api.alquran.cloud/v1/juz/${juzNumber}/${quranIdentifier}`,{
+    return await axios.get(`https://api.alquran.cloud/v1/juz/${juzNumber}/${quranIdentifier}`,{
         transformResponse : (data) =>{
             let Data = JSON.parse(data)
             let dataObject = Data.data.ayahs.reduce((acc : any , item : any) =>{
@@ -102,7 +102,7 @@ export async function getAllJuzData(juzNumber: string | undefined  , quranIdenti
 }
 
 export async function getTranslatedJuzAyahs(juzNumber: string | undefined , translateIdentifiers: string[] , limit: number){
-    return translateIdentifiers.length > 0 ? await axios.all(translateIdentifiers.map(item => axios.get(`http://api.alquran.cloud/v1/juz/${juzNumber}/${item}?offset=0&limit=${limit}`)))
+    return translateIdentifiers.length > 0 ? await axios.all(translateIdentifiers.map(item => axios.get(`https://api.alquran.cloud/v1/juz/${juzNumber}/${item}?offset=0&limit=${limit}`)))
     .then(res => res) :
     false
 }
