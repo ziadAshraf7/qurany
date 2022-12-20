@@ -49,6 +49,7 @@ function QuranReaderModal({
         onClose={handleClose}
       >
      <Box className={classes.modal}>
+      <Typography fontFamily={"cursive"} letterSpacing = {2} color = {"grey"} py = {1} sx = {{textAlign : "center"}}>Quran Readers</Typography>
      <div className={classes.root}>
      <Tabs
         orientation="vertical"
@@ -67,7 +68,7 @@ function QuranReaderModal({
         </Tabs>
 
       <Box
-      sx = {{width : "100%" , overflowY : "scroll" , height : ["300px","400px"]}}
+      sx = {{width : "100%" , overflowY : "scroll" , height : ["400px","400px"]}}
       >
           {quranReaders?.map((item : any , index : number) =>{
             let headerValuesArray = item[1]
@@ -75,7 +76,7 @@ function QuranReaderModal({
                   <Grid   spacing={2} container>
                    {headerValuesArray.map((headerValue : any , i : number) =>{
                           let targetIdentifier = quranIdentifier == headerValue.identifier
-                     return <Grid key = {i} xs = {6} sm = {3} item>
+                     return <Grid key = {i} xs = {6} sm = {4} md = {3} item>
                             <Box
                             bgcolor = {targetIdentifier ? "#455a64" : "white"}
                             color = {targetIdentifier? "#eee" : "#263238"}            
@@ -90,7 +91,7 @@ function QuranReaderModal({
                          }}
                             onClick = {() => handleQuranReader(headerValue.identifier)}
                             >
-                              <Typography sx = {{fontSize : [8 , 15]}}>{headerValue.name}</Typography>
+                              <Typography sx = {{fontSize : [6 , 8 , 15]}}>{headerValue.name}</Typography>
                             </Box>
                     </Grid>
                 })}

@@ -141,7 +141,7 @@ function NavBar({
         </FormControl > 
       
 
-        <FormControl sx = {{width : [80 , 250], height : [20,30] , backgroundColor : "white"}} >
+        <FormControl sx = {{ width : [80 , 250], height : [20,30] , backgroundColor : "white"}} >
           <InputLabel sx = {{position : "absolute" , top : -12 , fontSize : [10,14]}}>translation</InputLabel>
         <Select   
          renderValue={(selected) =>{
@@ -159,7 +159,6 @@ function NavBar({
             return translationSelectionItems(header , translationIdentifiersArray)
           })}
         </Select>
-        <FormHelperText sx = {{color : "#b3b3b3" , margin : 0 , fontSize : ["4px" , "10px"] , whiteSpace : "nowrap"}}>you have maximum 5 translation type to add</FormHelperText>
       </FormControl>
           <Box></Box>
          <Box sx = {{position : "absolute" , bottom : 0 , height : "2px" , left: 0 , width : scrollWidth + "%" , backgroundColor : "#00e5ff"}}></Box>
