@@ -55,7 +55,7 @@ function TafsirModel({
       {!isFetching && tafsirIdentifier !== "" &&  <Box p = {3} style = {{overflowY : "scroll" , maxHeight : "400px" , direction : "rtl"}}>
           <Typography variant = {"h6"}>{tafsirText}</Typography>
         </Box>}
-        {isFetching && <CircularProgress />}
+        {isFetching && <Box sx = {{textAlign : "center"}}><CircularProgress /></Box>}
       </Container>
       </Box>
     </Fade>
