@@ -49,7 +49,7 @@ function QuranReaderModal({
         onClose={handleClose}
       >
      <Box className={classes.modal}>
-      <Typography fontFamily={"cursive"} letterSpacing = {2} color = {"grey"} py = {1} sx = {{textAlign : "center"}}>Quran Readers</Typography>
+      <Typography fontFamily={"cursive"} variant = {"h6"} letterSpacing = {2} color = {"grey"} py = {1} sx = {{textAlign : "center"}}>Quran Readers</Typography>
      <div className={classes.root}>
      <Tabs
         orientation="vertical"

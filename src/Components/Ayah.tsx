@@ -56,10 +56,8 @@ import {handleScrollTo } from "../utils/utils";
                     </Stack>
                     </Box>}
 
-                     {targetAyah && <div style={{height : "100%"}}>
-                        
-                        
-                    <Stack mb = {5} spacing={1} direction = {"row"} justifyContent = {"flex-end"}> 
+                     {targetAyah && <div>
+                      <Stack mb = {5} spacing={1} direction = {"row"} justifyContent = {"flex-end"}> 
                         <Typography sx = {{
                             fontSize : [16,25] , 
                             width : "100%" ,
@@ -112,8 +110,8 @@ import {handleScrollTo } from "../utils/utils";
 
                         <Stack sx = {{width : "100%"}} textAlign = "center" direction = {"row"} justifyContent={"space-between"} alignItems = {"center"}>
                             <Box sx={{width : ["70px" , "200px"] ,padding : "5px"}}>
-                                <Typography sx = {{fontSize : [7 , 16]}} component = {"p"}>رقم الجزء:{juzNumber}</Typography>
-                                <Typography sx = {{fontSize : [7 , 16]}} component = {"p"}>juz number :{juzNumber}</Typography>
+                                <Typography sx = {{fontSize : [9 , 16]}} component = {"p"}>رقم الجزء:{juzNumber}</Typography>
+                                <Typography sx = {{fontSize : [9 , 16]}} component = {"p"}>juz:{juzNumber}</Typography>
                             </Box>
 
                                 <Button sx = {{fontSize : [8,14]}} onClick = {() => {
@@ -122,8 +120,8 @@ import {handleScrollTo } from "../utils/utils";
                                     }} variant = {"outlined"} >tafsir</Button>
 
                             <Box sx={{width : ["70px" , "200px"] , padding : "5px"}}>
-                                <Typography sx = {{fontSize : [7 , 16]}} component = {"p"}>{surahName.ar}</Typography>
-                                <Typography sx = {{fontSize : [7 , 16]}} component = {"p"}>surah name:{surahName.en}</Typography>
+                                <Typography sx = {{fontSize : [9 , 16]}} component = {"p"}>{surahName.ar}</Typography>
+                                <Typography sx = {{fontSize : [9 , 16]}} component = {"p"}>surah:{surahName.en}</Typography>
                             </Box>
                         </Stack>
 
