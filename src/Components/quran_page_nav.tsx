@@ -1,4 +1,4 @@
-import { AppBar, Box, Chip, FormHelperText, InputLabel, Link, ListSubheader, MenuItem, OutlinedInput, Select, SelectChangeEvent, Toolbar, Typography } from "@mui/material"
+import { AppBar, Box, InputLabel, Link, ListSubheader, MenuItem, Select, SelectChangeEvent, Toolbar, Typography } from "@mui/material"
 import FormControl from '@mui/material/FormControl';
 import { AppBarHeight, handleScrollTo } from "../utils/utils"
 import { useEffect, useState } from "react";
@@ -116,7 +116,7 @@ function NavBar({
       <nav>
         <AppBar sx = {{ marginTop : !show ? `-${AppBarHeight -  2}px` : 0 , transition : "ease 0.8s" }}  position="fixed">
         <Toolbar  sx = {{  position : "absolute" , width : "100%" , height : `${AppBarHeight}px`  , backgroundColor : "#212121" , display : "flex" , justifyContent : "space-between"}} variant="dense">    
-          <Typography href="../../" component={Link} sx = {{fontSize : [20 , 25] , cursor : "pointer" , textDecoration : "none"}} color="inherit" >
+          <Typography fontFamily={"EB Garamond, serif"} color = {"#eee"} href="../../" component={Link} sx = {{fontSize : [20 , 30] , cursor : "pointer" , textDecoration : "none"}}  >
             Qurany
           </Typography>
 

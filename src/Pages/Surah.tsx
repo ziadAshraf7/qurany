@@ -108,6 +108,7 @@ function Surah(){
 
 
         <Stack direction={"column"}>
+            
         {limitedAyahsData?.ayahs.map((ayahData : ayah , ayahIndex : number) =>{
             console.log(limitedAyahsData)
             let surahName = {ar :limitedAyahsData.name , en : limitedAyahsData.englishName}

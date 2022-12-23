@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { PaletteType } from '@material-ui/core';
 
 import {
     BrowserRouter as Router,
@@ -16,12 +17,24 @@ import {
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
+// declare module "@mui/material/styles" {
+//   interface Palette {
+//     color1: {main : string};
+//   }
+//   interface PaletteOptions {
+//     color1: {main : string};
+//   }
+// }
 
-
-const theme  = createTheme({
+const theme = createTheme({
   typography : {
     fontFamily : 'Nanum Myeongjo'
-  } 
+  } ,
+  palette : {
+   secondary : {
+    main : "#00e5ff"
+   }
+  }
 });
 
 const queryClient = new QueryClient()

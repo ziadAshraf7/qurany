@@ -49,7 +49,12 @@ function QuranReaderModal({
         onClose={handleClose}
       >
      <Box className={classes.modal}>
-      <Typography fontFamily={"cursive"} variant = {"h6"} letterSpacing = {2} color = {"grey"} py = {1} sx = {{textAlign : "center"}}>Quran Readers</Typography>
+      <Typography        
+       fontFamily={"EB Garamond, serif"} 
+       variant = {"h5"} 
+       letterSpacing = {2} 
+       py = {1} 
+       sx = {{textAlign : "center"}}>Quran Readers</Typography>
      <div className={classes.root}>
      <Tabs
         orientation="vertical"
@@ -78,10 +83,9 @@ function QuranReaderModal({
                           let targetIdentifier = quranIdentifier == headerValue.identifier
                      return <Grid key = {i} xs = {6} sm = {4} md = {3} item>
                             <Box
-                            bgcolor = {targetIdentifier ? "#455a64" : "white"}
-                            color = {targetIdentifier? "#eee" : "#263238"}            
                             borderRadius = {3}
                             textAlign = "center"
+                            border = {targetIdentifier ? "1px solid #18ffff" : ""}
                             p={2}
                             sx = {{
                              boxShadow : 1 , 

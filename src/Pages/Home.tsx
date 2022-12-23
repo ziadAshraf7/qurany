@@ -6,6 +6,7 @@ import QuranReaderModal from "../Components/quranReadersModal"
 import { Link } from "react-scroll"
 import { surah } from "../Types/types"
 import HomeNav from "../Components/homeNav"
+import { AppBarHeight } from "../utils/utils"
 
 
 const Home  = () =>{
@@ -41,21 +42,26 @@ const Home  = () =>{
         />
 
         <HomeNav />
+        
+     
 
 
+        <div style = {{backgroundColor :"#1F2125"}}>
 
-        <div style = {{backgroundColor :"RGBA(255, 255, 255, 0.24)"}}>
-
+        <Box sx = {{
+            height : `${AppBarHeight}px`,
+        }}></Box>
              <Stack mb = {20} sx = {{width : "100%"}} justifyContent={"center"} alignItems = {"center"} direction={{xs : "column" , md : "row"}}>
                 <Stack sx = {{width : ["100%","50%"]}} justifyContent={"center"} alignItems = {"center"}>
-                    <img style = {{objectFit : "cover" , width : "80%" , height : "80%"}} src = {require("../imgs/Quran Open transparent PNG - StickPNG.png")} />
+                    <img style = {{objectFit : "cover" , width : "80%" , height : "80%"}} src = {require("../imgs/—Pngtree—child reading the quran png_7041724.png")} />
                 </Stack>
                 <Stack  sx = {{width : ["100%","50%"] , textAlign : "center"}} direction={"column"} justifyContent={"center"} alignItems = {"center"}>
-                    <Typography sx = {{fontSize : [16 , 18 , null , 22] }} mb = {2} >Choose a specific Sura or juz and start listning to it </Typography>
+                <img style = {{objectFit : "cover" , width : "30%" , height : "30%"}} src = {require("../imgs/—Pngtree—al quran kareem calligraphy png_7117620.png")} />
+                    <Typography fontFamily={"EB Garamond, serif"} sx = {{fontSize : [17 , 19 , null , 24] , color : "#eee" }} mb = {2} >Choose a specific Sura or juz and start listning to it </Typography>
                     <Link 
                     smooth = {true}
                     to = {"surahs"} 
-                    ><Button sx = {{width : [200,300] , fontSize : [12,16]}} variant = {"contained"}>Check Out</Button></Link>
+                    ><Button color = {"secondary"} sx = {{width : [200,300] , fontSize : [12,16]}} variant = {"outlined"}>Check Out</Button></Link>
                  </Stack>
            </Stack >
 
@@ -63,15 +69,15 @@ const Home  = () =>{
 
   <Container >
 
-    <Stack id = {"surahs"} mb = {10} sx = {{textAlign : "center"}}>
+    <Stack id = {"surahs"} mb = {20} sx = {{textAlign : "center"}}>
 
     <Typography 
-        fontFamily={"Kalam"} 
+        fontFamily={"EB Garamond, serif"} 
         textTransform = {"uppercase"}
-    color = {"#718096"} 
-    letterSpacing={[1,8]} 
-    mb = {2} 
-    sx = {{fontSize : [18 , 40]}}> surahs collection</Typography>    
+    color = {"#eee"} 
+    letterSpacing={[2,6]} 
+    mb = {10} 
+    sx = {{fontSize : [23 , 40]}}> Surahs Collection</Typography>    
 
      {isLoading1 && 
          <Grid spacing={5} container >
@@ -92,14 +98,13 @@ const Home  = () =>{
             <Box 
                p = {2}
                borderRadius = {3}
-               bgcolor = {targetSurahNumber ? "#263238" : "white"}
-               color = {targetSurahNumber? "#eee" : "#263238"}
+               border = {targetSurahNumber ? "1px solid #18ffff" : "1px solid grey"}
+               color = {"#eee"}
                onClick = {() => handleSurahNumber(surahItem.number)}
                sx = {{
-                boxShadow : 2 , 
                 cursor : "pointer" ,
                 transition : "ease 0.5s",
-                "&:hover" : targetSurahNumber ? {} : {backgroundColor : "#fafafa" , boxShadow : 0 , transform : "scale(0.95)" }
+                "&:hover" : targetSurahNumber ? {} : { transform : "scale(0.95)" , border : "1px solid #18ffff" }
             }}
             >
                 <Stack 
@@ -125,11 +130,11 @@ const Home  = () =>{
 
     <Typography 
         textTransform = {"uppercase"}
-        fontFamily={"Kalam"} 
-        color = {"#718096"} 
-        letterSpacing={[1,8]} 
-        mb = {2} 
-        sx = {{fontSize : [18 , 40]}}
+        fontFamily={"EB Garamond, serif"} 
+        color = {"#eee"} 
+        letterSpacing={[1,6]} 
+        mb = {10} 
+        sx = {{fontSize : [23 , 40]}}
     > juz collection </Typography>
 
       {isLoading2 && 
@@ -149,17 +154,17 @@ const Home  = () =>{
            return (
            <Grid key = {juzNumber} item xs = {4} sm = {3} md = {2} >
             <Box
-               bgcolor = {targetJuzNumber ? "#263238" : "white"}
-               color = {targetJuzNumber? "#eee" : "#263238"}            
-               onClick = {() => handleJuzNumber(juzNumber)} 
                borderRadius = {3}
+               border = {targetJuzNumber ? "1px solid #18ffff" : "1px solid grey"}
+               color = {"#eee"}        
+               onClick = {() => handleJuzNumber(juzNumber)} 
                textAlign = "center"
                p={2}
                sx = {{
                 boxShadow : 1 , 
                 cursor : "pointer" ,
                 transition : "ease 0.5s",
-                "&:hover" : targetJuzNumber ? {} : {backgroundColor : "#fafafa" , boxShadow : 0 , transform : "scale(0.95)" }
+                "&:hover" : targetJuzNumber ? {} : { transform : "scale(0.95)" , border : "1px solid #18ffff" }
             }}
             >
                 <div>{juzNumber}</div>

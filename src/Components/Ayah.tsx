@@ -48,11 +48,13 @@ import {handleScrollTo } from "../utils/utils";
                    {!targetAyah && 
                    <Box sx={{direction : "rtl"}}>
                     <Stack direction={"row"} justifyContent = {"space-between"}>
-                      <Box sx = {{ position : "relative" , width : ["30px","35px"] , height : "35px" }}>
+                      <Box sx = {{ position : "relative" , width : [28,40] , height : [28,40] }}>
                          <img style = {{ position : "absolute" ,width : "100%" , height : "100%" , objectFit : "cover"}}  src = {require("../imgs/PngItem_5034905.png")} />
                          <Typography sx = {{ fontSize : [12 , 14] ,position : "absolute" , top : "50%" , transform : "translate(0,-50%)" , width : "100%" , textAlign : "center"}}>{ayahNumberinSurah}</Typography>
                        </Box>
-                       <Typography sx = {{ fontSize : [12 , 14] }}>{surahName.en}</Typography>
+                       <Box sx = {{display : "flex" , alignItems : "center"}}>
+                         <Typography fontFamily={"EB Garamond, serif"} sx = {{ fontSize : [12 , 16] }}>{surahName.en}</Typography>
+                       </Box>
                     </Stack>
                     </Box>}
 
@@ -64,7 +66,7 @@ import {handleScrollTo } from "../utils/utils";
                             direction : "rtl"}} 
                              >{ayahText}</Typography>
                             
-                             <Box sx = {{ position : "relative" , width : ["30px","35px"] , height : "35px" }}>
+                             <Box sx = {{ position : "relative" , width : [28,40] , height : [28,40] }}>
                                <img 
                                style = {{width : "100%" , height : "100%" , objectFit : "cover"}}
                                src = {require("../imgs/PngItem_5034905.png")} />
@@ -110,18 +112,18 @@ import {handleScrollTo } from "../utils/utils";
 
                         <Stack sx = {{width : "100%"}} textAlign = "center" direction = {"row"} justifyContent={"space-between"} alignItems = {"center"}>
                             <Box sx={{width : ["70px" , "200px"] ,padding : "5px"}}>
-                                <Typography sx = {{fontSize : [9 , 16]}} component = {"p"}>رقم الجزء:{juzNumber}</Typography>
-                                <Typography sx = {{fontSize : [9 , 16]}} component = {"p"}>juz:{juzNumber}</Typography>
+                                <Typography fontFamily={"EB Garamond, serif"} sx = {{fontSize : [9 , 16]}} component = {"p"}>رقم الجزء:{juzNumber}</Typography>
+                                <Typography fontFamily={"EB Garamond, serif"}sx = {{fontSize : [9 , 16]}} component = {"p"}>juz:{juzNumber}</Typography>
                             </Box>
 
-                                <Button sx = {{fontSize : [8,14]}} onClick = {() => {
+                                <Button color = {"secondary"} sx = {{fontSize : [8,14]}} onClick = {() => {
                                     setTafsirAyahNumber(ayahNumber)
                                     setModalOpen(true)
                                     }} variant = {"outlined"} >tafsir</Button>
 
                             <Box sx={{width : ["70px" , "200px"] , padding : "5px"}}>
-                                <Typography sx = {{fontSize : [9 , 16]}} component = {"p"}>{surahName.ar}</Typography>
-                                <Typography sx = {{fontSize : [9 , 16]}} component = {"p"}>surah:{surahName.en}</Typography>
+                                <Typography fontFamily={"EB Garamond, serif"}sx = {{fontSize : [9 , 16]}} component = {"p"}>{surahName.ar}</Typography>
+                                <Typography fontFamily={"EB Garamond, serif"}sx = {{fontSize : [9 , 16]}} component = {"p"}>Surah:{surahName.en}</Typography>
                             </Box>
                         </Stack>
 
