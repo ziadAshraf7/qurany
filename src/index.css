@@ -20,3 +20,12 @@ code {
     monospace;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #1F2125;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00e5ff;
+}
