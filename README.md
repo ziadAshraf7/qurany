@@ -17,10 +17,6 @@ This web application provides an interactive experience for reading, listening, 
 ### 3. Tafsir Section
 - Each Ayah has an option to view **Tafsir** (interpretation), with various types of Tafsir available for in-depth study.
   
-## Screenshot of The Site
-![Screenshot of the Site](./1.PNG)  <!-- Add your screenshot here -->
-![Screenshot of the Site](.2.PNG)  <!-- Add your screenshot here -->
-
 ## Technologies Used
 - **React**: Frontend library for building user interfaces.
 - **Material-UI**: UI components for a modern, responsive design.
